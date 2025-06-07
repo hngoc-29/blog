@@ -10,7 +10,7 @@ import Link from 'next/link';
 export function generateMetadata() {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
-    title: 'Account — Amir Ardalan',
+    title: 'Account — Tellwind',
     description: 'View and manage your account details.',
   };
 }

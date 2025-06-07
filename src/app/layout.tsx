@@ -39,16 +39,16 @@ export async function generateMetadata(): Promise<Metadata> {
 
   const getPageTitle = (path: string): string => {
     if (path === '/') {
-      return 'Amir Ardalan — Fullstack Engineer & UI/UX Designer';
+      return 'Tellwind — Fullstack Engineer & UI/UX Designer';
     }
     if (path.startsWith('/blog/')) {
       const slug = path.split('/blog/')[1];
-      return `${slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} — Amir Ardalan`;
+      return `${slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())} — Tellwind`;
     }
     if (path.length > 1) {
-      return `${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)} — Amir Ardalan`;
+      return `${path.slice(1).charAt(0).toUpperCase()}${path.slice(2)} — Tellwind`;
     }
-    return 'Amir Ardalan — Fullstack Engineer & UI/UX Designer';
+    return 'Tellwind — Fullstack Engineer & UI/UX Designer';
   };
 
   const title = getPageTitle(pathname);
@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
     title,
-    description: 'The portfolio and blog of Engineer and Designer Amir Ardalan',
+    description: 'The portfolio and blog of Engineer and Designer Tellwind',
     icons: [
       {
         rel: 'icon',

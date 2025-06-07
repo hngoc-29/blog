@@ -1,6 +1,6 @@
 {
-  "short_name": "Amir Ardalan",
-  "name": "Amir Ardalan – Fullstack Engineer",
+  "short_name": "Tellwind",
+  "name": "Tellwind – Fullstack Engineer",
   "icons": [
     {
       "src": "/icons/pwa-icon.png",
@@ -36,13 +36,13 @@
   "scope": "/",
   "shortcuts": [
     {
-      "name": "Amir Ardalan",
+      "name": "Tellwind",
       "short_name": "Amir",
       "description": "Fullstack Engineer & UI Designer with 10+ years of experience creating innovative digital solutions.",
       "url": "/"
     }
   ],
-  "description": "Amir Ardalan Thumbnail",
+  "description": "Tellwind Thumbnail",
   "screenshots": [
     {
       "src": "/thumbnail.png",

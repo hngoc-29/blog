@@ -20,7 +20,7 @@ export default function HomeContent() {
           className="text-5xl font-medium tracking-wide text-dark sm:text-6xl md:text-7xl lg:text-8xl 2xl:text-9xl dark:text-light"
           id="page-title"
         >
-          Amir Ardalan
+          Tellwind
         </h1>
         <h2
           className="my-2 text-sm font-medium uppercase tracking-widest text-zinc-600 sm:text-md md:text-xl lg:my-5 lg:text-2xl dark:text-zinc-400"

@@ -16,12 +16,11 @@ interface Options {
 
 const data = {
   typed: [
-    `cd amir.sh --hello`,
+    `cd tellwind.sh --hello`,
     `learn a bit <a href="/about" aria-label="learn a bit about me" className="text-primary">about</a> me^3000`,
     `peruse my <a href="/blog" aria-label="peruse my blog posts" className="text-primary">blog</a> posts^3000`,
     `view my <a href="/uses" aria-label="view my toolbox" className="text-primary">toolbox</a>^3000`,
-    `follow me on <a href="https://x.com/amirardalan" aria-label="follow me on X" target="_blank" rel="noopener noreferrer" className="text-primary">x.com</a>^3000`,
-    `explore my <a href="https://github.com/amirardalan" aria-label="explore my GitHub" target="_blank" rel="noopener noreferrer" className="text-primary">github</a>^3000`,
+    `explore my <a href="https://github.com/hngoc-29" aria-label="explore my GitHub" target="_blank" rel="noopener noreferrer" className="text-primary">github</a>^3000`,
   ],
 };
 

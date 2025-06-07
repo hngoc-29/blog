@@ -46,7 +46,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} — Amir Ardalan`,
+    title: `${post.title} — Tellwind`,
     description: post.excerpt || 'Read this article on the blog',
     alternates: {
       canonical: `/blog/${slug}`,

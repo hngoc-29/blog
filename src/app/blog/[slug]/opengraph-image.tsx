@@ -20,13 +20,13 @@ export default async function Image({ params }: { params: { slug: string } }) {
     if (!post) {
       return generateOgImage({
         title: 'Blog Post',
-        description: 'Read this post on amir.sh',
+        description: 'Read this post on tellwind.sh',
       });
     }
 
     return generateOgImage({
       title: post.title,
-      description: post.excerpt || 'Read this post on amir.sh',
+      description: post.excerpt || 'Read this post on tellwind.sh',
       category: post.category?.name || undefined,
     });
   } catch (error) {
@@ -34,8 +34,8 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
     // Fallback OG
     return generateOgImage({
-      title: 'Blog — amir.sh',
-      description: 'Read this post on amir.sh',
+      title: 'Blog — tellwind.sh',
+      description: 'Read this post on tellwind.sh',
     });
   }
 }

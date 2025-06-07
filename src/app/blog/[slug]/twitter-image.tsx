@@ -10,7 +10,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
 
   return generateTwitterImage({
     title: post?.title || 'Blog Post',
-    description: post?.excerpt || 'Read this post on amir.sh',
+    description: post?.excerpt || 'Read this post on tellwind.sh',
     category: post?.category?.name || undefined,
   });
 }

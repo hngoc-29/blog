@@ -32,7 +32,7 @@ export default function HeaderExternalLinks() {
         </button>
       </Tooltip>
       <Tooltip text="Facebook me" pos="b">
-        <button onClick={handleClickFacebook} aria-label="Visit GitHub repository">
+        <button onClick={handleClickFacebook} aria-label="Visit Facebook own">
           <IconFacebook />
         </button>
       </Tooltip>

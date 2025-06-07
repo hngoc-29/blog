@@ -9,7 +9,7 @@ import { BlogPost } from '@/types/blog';
 export const generateMetadata = () => {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
-    title: 'Blog — Amir Ardalan',
+    title: 'Blog — Tellwind',
     description: 'Articles on web development, design, and technology',
     alternates: {
       canonical: '/blog',

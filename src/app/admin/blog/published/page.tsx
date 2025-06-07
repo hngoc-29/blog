@@ -9,7 +9,7 @@ export const dynamic = 'force-dynamic';
 export function generateMetadata() {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
-    title: 'Published Posts — Amir Ardalan',
+    title: 'Published Posts — Tellwind',
     description: 'View and manage published blog posts in the admin panel.',
   };
 }

@@ -14,7 +14,7 @@ export default function CategoriesPage() {
 export function generateMetadata() {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
-    title: 'Categories — Amir Ardalan',
+    title: 'Categories — Tellwind',
     description: 'Manage blog categories in the admin panel.',
   };
 }

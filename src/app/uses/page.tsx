@@ -4,101 +4,67 @@ import UsesItemGrid from '@/components/content/UsesItemGrid';
 import UsesItemCard from '@/components/content/UsesItemCard';
 
 export default function Uses() {
-  const computers = [
-    {
-      title: 'MacOS',
-      items: [
-        { value: '14" Apple MacBook Pro' },
-        { value: 'M3 Pro' },
-        { value: '12-core CPU' },
-        { value: '18-core GPU' },
-        { value: '36GB RAM' },
-        { value: '1TB SSD' },
-        { value: 'Silver' },
-      ],
-    },
-    {
-      title: 'Windows 11',
-      items: [
-        { value: 'NZXT H7 Flow w/ ARCTIC P14' },
-        { value: 'Intel i7-14700KF 5.6GHz' },
-        { value: 'MSI PRO Z790-A MAX Wifi' },
-        { value: 'Gigabyte RTX 4090 AERO OC 24GB' },
-        { value: 'Corsair Vengeance DDR5-6400 CL32 64GB' },
-        { value: 'Corsair RM1000x SHIFT 1000W' },
-        { value: 'WD Black SN850X 4TB NVME' },
-        { value: 'Deepcool LT720' },
-      ],
-    },
-    {
-      title: 'Arch Btw',
-      items: [
-        { value: 'Lenovo ThinkPad T440s (Modded)' },
-        { value: 'Intel Core i5-4200U 2.6GHz' },
-        { value: '12GB DDR3L' },
-        { value: 'Samsung EVO 850 500GB' },
-      ],
-    },
-    {
-      title: 'Phone',
-      items: [
-        { value: 'Apple iPhone 15 Pro 256GB' },
-        { value: 'White Titanium' },
-      ],
-    },
-  ];
+  // const computers = [
+  //   {
+  //     title: 'MacOS',
+  //     items: [
+  //       { value: '14" Apple MacBook Pro' },
+  //       { value: 'M3 Pro' },
+  //       { value: '12-core CPU' },
+  //       { value: '18-core GPU' },
+  //       { value: '36GB RAM' },
+  //       { value: '1TB SSD' },
+  //       { value: 'Silver' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Windows 11',
+  //     items: [
+  //       { value: 'NZXT H7 Flow w/ ARCTIC P14' },
+  //       { value: 'Intel i7-14700KF 5.6GHz' },
+  //       { value: 'MSI PRO Z790-A MAX Wifi' },
+  //       { value: 'Gigabyte RTX 4090 AERO OC 24GB' },
+  //       { value: 'Corsair Vengeance DDR5-6400 CL32 64GB' },
+  //       { value: 'Corsair RM1000x SHIFT 1000W' },
+  //       { value: 'WD Black SN850X 4TB NVME' },
+  //       { value: 'Deepcool LT720' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Arch Btw',
+  //     items: [
+  //       { value: 'Lenovo ThinkPad T440s (Modded)' },
+  //       { value: 'Intel Core i5-4200U 2.6GHz' },
+  //       { value: '12GB DDR3L' },
+  //       { value: 'Samsung EVO 850 500GB' },
+  //     ],
+  //   },
+  //   {
+  //     title: 'Phone',
+  //     items: [
+  //       { value: 'Apple iPhone 15 Pro 256GB' },
+  //       { value: 'White Titanium' },
+  //     ],
+  //   },
+  // ];
 
   const peripherals = [
     {
       title: 'PC',
       items: [
-        { value: 'Alienware AW3423DW 34.2" 175Hz' },
-        { value: 'Logitech G 502X Lightspeed' },
-        { value: 'Keychron K2 HE' },
+        { value: 'Win 10' },
       ],
-    },
-    {
-      title: 'Headphones',
-      items: [
-        { value: 'Beyerdynamic DT770Pro' },
-        { value: 'Sennheiser HD25-1 II' },
-        { value: 'Apple AirPods Pro (Gen 2)' },
-      ],
-    },
-    {
-      title: 'Interface & Monitors',
-      items: [{ value: 'MOTU Audio Express' }, { value: 'KRK VXT8' }],
-    },
-    {
-      title: 'MIDI Controllers',
-      items: [{ value: 'Korg nanoKONTROL 1' }, { value: 'Korg nanoPAD 1' }],
     },
   ];
 
   const software = [
     {
-      title: 'Writing',
-      items: [{ value: 'iaWriter' }],
-    },
-    {
-      title: 'Notes',
-      items: [{ value: 'Obsidian' }],
-    },
-    {
       title: 'Code',
-      items: [{ value: 'VS Code' }, { value: 'Zed' }],
-    },
-    {
-      title: 'Design',
-      items: [{ value: 'Figma' }, { value: 'Aseprite' }],
+      items: [{ value: 'VS Code' }],
     },
     {
       title: 'Music',
-      items: [{ value: 'Ableton Live 12' }],
-    },
-    {
-      title: 'Listening',
-      items: [{ value: 'Apple Music' }, { value: 'Apple Podcasts' }],
+      items: [{ value: 'Zing MP3' }],
     },
   ];
 
@@ -128,6 +94,13 @@ export default function Uses() {
       ],
     },
   ];
+
+  const computers = [{
+    title: 'Window',
+    items: [
+      { value: 'Win 10' },
+    ],
+  }];
 
   return (
     <Container>

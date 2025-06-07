@@ -43,7 +43,7 @@ export default function Header() {
 
       <div className="flex w-full flex-row items-center justify-between">
         <Link href="/" aria-label="Home">
-          <Logo size={isTablet ? 25 : 35} title="amir.sh" />
+          <Logo size={isTablet ? 25 : 35} title="tellwind.sh" />
         </Link>
         <div className="flex w-full max-w-screen-xl items-center justify-end space-x-4">
           <nav

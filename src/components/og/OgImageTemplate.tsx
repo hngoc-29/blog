@@ -37,7 +37,7 @@ export async function generateOgImage({
       >
         <div tw="flex flex-col w-full h-full p-20 relative justify-between">
           <div tw="flex w-full items-center justify-between">
-            <span tw="text-3xl text-[#00ffd1]">amir.sh</span>
+            <span tw="text-3xl text-[#00ffd1]">tellwind.sh</span>
             {category && <span tw="text-3xl text-zinc-500">#{category}</span>}
           </div>
 

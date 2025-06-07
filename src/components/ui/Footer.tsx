@@ -12,7 +12,7 @@ export default async function Footer() {
           &copy;{new Date().getFullYear()}
         </span>
         <Logo size={20} inverted />
-        <span className="ml-4">amir.sh</span>
+        <span className="ml-4">tellwind.sh</span>
       </div>
       <div className="hidden md:flex">
         <span aria-hidden="true">•</span>

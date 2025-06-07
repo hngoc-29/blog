@@ -31,7 +31,7 @@ export default async function NewBlogPost() {
 export function generateMetadata() {
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
-    title: 'New Post — Amir Ardalan',
+    title: 'New Post — Tellwind',
     description: 'Create a new blog post in the admin panel.',
   };
 }

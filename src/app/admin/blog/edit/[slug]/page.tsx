@@ -70,7 +70,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const title = `Edit Post: ${slug
     .replace(/-/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase())} — Amir Ardalan`;
+    .replace(/\b\w/g, (c) => c.toUpperCase())} — Tellwind`;
 
   return {
     metadataBase: new URL(`${process.env.NEXT_PUBLIC_URL}`),
