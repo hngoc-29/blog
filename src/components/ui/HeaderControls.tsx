@@ -1,11 +1,20 @@
 import IconGithub from '@/components/icons/IconGithub';
 import Tooltip from '@/components/ui/Tooltip';
 import ThemeMenu from '@/components/ui/ThemeMenu';
+import IconFacebook from '../icons/IconFacebook';
 
 export default function HeaderExternalLinks() {
-  const handleClick = () => {
+  const handleClickGithub = () => {
     window.open(
-      'https://github.com/amirardalan/site',
+      'https://github.com/hngoc-29/blog',
+      '_blank',
+      'noopener,noreferrer'
+    );
+  };
+
+  const handleClickFacebook = () => {
+    window.open(
+      'https://www.facebook.com/ngoc29FPG',
       '_blank',
       'noopener,noreferrer'
     );
@@ -18,8 +27,13 @@ export default function HeaderExternalLinks() {
       aria-label="External links and site controls"
     >
       <Tooltip text="Star on GitHub" pos="b">
-        <button onClick={handleClick} aria-label="Visit GitHub repository">
+        <button onClick={handleClickGithub} aria-label="Visit GitHub repository">
           <IconGithub />
+        </button>
+      </Tooltip>
+      <Tooltip text="Facebook me" pos="b">
+        <button onClick={handleClickFacebook} aria-label="Visit GitHub repository">
+          <IconFacebook />
         </button>
       </Tooltip>
       <ThemeMenu />

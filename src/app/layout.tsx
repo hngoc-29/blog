@@ -71,6 +71,9 @@ export async function generateMetadata(): Promise<Metadata> {
         url: DarkIcon.src,
       },
     ],
+    other: {
+      'google-site-verification': 'exKzkXXkfCbBRohkUy2ptqVdT9oa8jqNnGSp2cY2m-Y',
+    },
   };
 }
 
