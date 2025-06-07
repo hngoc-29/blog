@@ -8,7 +8,7 @@ export default function AuthError() {
   const error = searchParams?.get('error');
 
   return (
-    <div className="flex h-[80vh] flex-col items-center justify-center text-dark dark:text-light">
+    <div className="flex h-[80vh] w-full flex-col items-center justify-center text-dark dark:text-light">
       <h1 className="mb-4 text-xl font-medium">Authentication Error</h1>
 
       {error === 'AccessDenied' && (
