@@ -1,4 +1,5 @@
 import Button from '@/components/ui/Button';
+import clsx from 'clsx';
 
 interface ModalProps {
   isOpen: boolean;
@@ -11,6 +12,7 @@ interface ModalProps {
   children?: React.ReactNode;
   buttons?: 'both' | 'cancel' | 'confirm';
   leftButton?: React.ReactNode;
+  className?: string;
 }
 
 export default function Modal({
@@ -24,6 +26,7 @@ export default function Modal({
   children,
   buttons = 'both',
   leftButton,
+  className,
 }: ModalProps) {
   if (!isOpen) return null;
 
@@ -33,7 +36,10 @@ export default function Modal({
       onClick={onCancel}
     >
       <div
-        className="w-full max-w-md rounded-lg bg-light p-6 shadow-xl dark:bg-zinc-800"
+        className={clsx(
+          'w-full max-w-md rounded-lg bg-light p-6 shadow-xl dark:bg-zinc-800',
+          className
+        )}
         onClick={(e) => e.stopPropagation()}
       >
         <h3 className="mb-4 text-lg font-medium text-zinc-900 dark:text-light">

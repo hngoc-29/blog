@@ -11,6 +11,7 @@ interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'danger';
   color?: string;
   size?: 'default' | 'large';
+  className?: string; // thêm dòng này
 }
 
 export default function Button({
@@ -22,6 +23,7 @@ export default function Button({
   variant = 'primary',
   color,
   size = 'default',
+  className, // thêm dòng này
 }: ButtonProps) {
   const buttonClasses = clsx(
     // Base
@@ -47,7 +49,8 @@ export default function Button({
         variant === 'secondary' && !color,
       'bg-dark dark:bg-light text-light dark:text-dark hover:bg-primary':
         variant === 'primary' && !color,
-    }
+    },
+    className // thêm dòng này
   );
 
   if (url) {

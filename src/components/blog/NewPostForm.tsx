@@ -8,6 +8,9 @@ import { useToast } from '@/components/ui/ToastContext';
 import { useImageInsertion } from '@/hooks/useImageInsertion';
 import { useUnsavedChanges } from '@/hooks/useUnsavedChanges';
 import { Category } from '@/types/blog';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
 
 import PostFormFields from '@/components/blog/PostFormFields';
 import Button from '@/components/ui/Button';
@@ -81,6 +84,7 @@ export default function NewPostForm({
   const [showGallery, setShowGallery] = useState(false);
   const [showCancelModal, setShowCancelModal] = useState(false);
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(
     null!
   ) as React.RefObject<HTMLInputElement>;
@@ -207,12 +211,19 @@ export default function NewPostForm({
           setCategoryId={createFieldDispatcher('categoryId')}
           categoriesLoading={categoriesLoading}
         />
-        <PostFormControls
-          isSubmitting={isSubmitting}
-          showDiscard={true}
-          onDiscard={() => setShowCancelModal(true)}
-          onSubmitText="Create Post"
-        />
+        <div className="flex flex-row gap-2 items-center mt-4">
+          <Button
+            type="button"
+            text="Preview"
+            onClick={() => setShowPreview(true)}
+          />
+          <PostFormControls
+            isSubmitting={isSubmitting}
+            showDiscard={true}
+            onDiscard={() => setShowCancelModal(true)}
+            onSubmitText="Create Post"
+          />
+        </div>
       </form>
 
       <Modal
@@ -245,6 +256,33 @@ export default function NewPostForm({
           fileInputRef={fileInputRef}
           cursorPosition={cursorPosition}
         />
+      </Modal>
+
+      <Modal
+        isOpen={showPreview}
+        title=""
+        message=""
+        onCancel={() => setShowPreview(false)}
+        buttons="cancel"
+        className="!p-0"
+      >
+        <div
+          className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg border border-zinc-200 dark:border-zinc-800 p-6 max-w-3xl mx-auto my-4 overflow-y-auto"
+          style={{ maxHeight: '80vh' }}
+        >
+          <div className="mb-6 border-b border-zinc-200 dark:border-zinc-700 pb-4">
+            <h1 className="text-3xl font-bold mb-1 dark:text-light">{title}</h1>
+            <div className="text-zinc-500 text-xs dark:text-zinc-400">{slug}</div>
+          </div>
+          <div className="prose max-w-none dark:prose-invert dark:text-light">
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeHighlight]}
+            >
+              {content}
+            </ReactMarkdown>
+          </div>
+        </div>
       </Modal>
 
       <Modal
