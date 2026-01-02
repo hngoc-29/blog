@@ -51,9 +51,7 @@ export default function Uses() {
   const peripherals = [
     {
       title: 'PC',
-      items: [
-        { value: 'Win 10' },
-      ],
+      items: [{ value: 'Win 10' }],
     },
   ];
 
@@ -95,12 +93,12 @@ export default function Uses() {
     },
   ];
 
-  const computers = [{
-    title: 'Window',
-    items: [
-      { value: 'Win 10' },
-    ],
-  }];
+  const computers = [
+    {
+      title: 'Window',
+      items: [{ value: 'Win 10' }],
+    },
+  ];
 
   return (
     <Container>

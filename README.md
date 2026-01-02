@@ -69,7 +69,6 @@ ALLOWED_EMAIL_DOMAINS=<gmail.com, your-domain.com>
 
 # Supabase (CMS Database)
 DB_URL=<your-supabase-transaction-pooler-url>
-DB_API_KEY=<your-supabase-api-key>
 
 # Cloudinary (CMS Media Gallery)
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=<your-cloudinary-cloud-name>

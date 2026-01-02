@@ -15,15 +15,29 @@ if (typeof window !== 'undefined') {
     capture_pageview: false,
     capture_pageleave: true,
     disable_session_recording: disableSessionRecording,
-    loaded: (posthog) => {
+
+    // 👇 BẬT DEBUG
+    debug: true,
+
+    loaded: (ph) => {
+      console.log('✅ PostHog loaded');
+      console.log('PostHog config:', {
+        distinct_id: ph.get_distinct_id(),
+        api_host: ph.config.api_host,
+        token: ph.config.token,
+      });
+
       if (
         process.env.NODE_ENV === 'development' ||
         process.env.NEXT_PUBLIC_VERCEL_ENV === 'preview'
       ) {
-        posthog.opt_out_capturing();
+        ph.opt_out_capturing();
+        console.log('⛔ PostHog opt-out (dev/preview)');
       }
+
       if (window.location.pathname.startsWith('/admin')) {
-        posthog.opt_out_capturing();
+        ph.opt_out_capturing();
+        console.log('⛔ PostHog opt-out (/admin)');
       }
     },
   });

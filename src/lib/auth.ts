@@ -36,7 +36,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       // If the user does not exist, insert them into the database
       if (!exists) {
-        return false;
         await createUser(user.name || 'Unknown User', user.email!);
       }
 

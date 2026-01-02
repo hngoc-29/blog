@@ -14,7 +14,13 @@ export default function About() {
         </div>
         <section className="mb-4 max-w-7xl font-serif text-xl font-light italic leading-normal md:text-3xl md:leading-normal lg:mb-6 lg:text-4xl lg:leading-normal">
           <p className="mb-4 text-dark md:mb-6 lg:mb-8 dark:text-light">
-            Website created with open source code <a className='underline text-blue-500' href='https://github.com/amirardalan/amirardalan.com'>Amir Ardalan</a>
+            Website created with open source code{' '}
+            <a
+              className="text-blue-500 underline"
+              href="https://github.com/amirardalan/amirardalan.com"
+            >
+              Amir Ardalan
+            </a>
           </p>
         </section>
 
@@ -23,9 +29,7 @@ export default function About() {
           aria-label="Contact links"
         >
           <div className="flex flex-col justify-center">
-            <div className="mb-2 flex flex-row items-center">
-
-            </div>
+            <div className="mb-2 flex flex-row items-center"></div>
             <div className="mb-2 flex flex-row items-center">
               <p className="text-zinc-600 dark:text-zinc-500" id="github-link">
                 GitHub:
@@ -42,9 +46,7 @@ export default function About() {
                 </a>
               </Tooltip>
             </div>
-            <div className="mb-2 flex flex-row items-center">
-
-            </div>
+            <div className="mb-2 flex flex-row items-center"></div>
             <div className="mb-2 flex flex-row items-center">
               <p className="text-zinc-600 dark:text-zinc-500" id="resume-link">
                 Facebook:
