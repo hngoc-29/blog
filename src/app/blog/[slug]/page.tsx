@@ -17,7 +17,7 @@ import BlogPostClientParts from './BlogPostClientParts';
 
 import ClientLikeCount from '@/components/blog/ClientLikeCount';
 import ClientViewCount from '@/components/blog/ClientViewCount';
-import BlogSupport from '@/components/blog/BlogSupport';
+import BlogSupportWrapper from './BlogSupportWrapper';
 import AdjacentPostNavigation from '@/components/blog/AdjacentPostNavigation';
 import AdminPostControls from '@/components/admin/AdminPostControls';
 import SocialActions from '@/components/blog/SocialActions';
@@ -26,6 +26,7 @@ import { formatDate } from '@/utils/format-date';
 import calculateReadTime from '@/utils/calculate-readtime';
 
 export const dynamicParams = true;
+export const dynamic = 'force-dynamic';
 
 export async function generateStaticParams() {
   return await getAllPublishedSlugs();
@@ -175,7 +176,7 @@ export default async function BlogPost({
         <div className="mdx-content mt-10" aria-labelledby="post-title">
           {content}
         </div>
-        <BlogSupport postId={post.id} />
+        <BlogSupportWrapper postId={Number(post.id)} />
         {post.published && (adjacentPosts.previous || adjacentPosts.next) && (
           <AdjacentPostNavigation
             previous={adjacentPosts.previous}
