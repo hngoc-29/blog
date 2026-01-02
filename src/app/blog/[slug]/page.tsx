@@ -13,6 +13,8 @@ import { components } from '@/components/blog/MDXComponents';
 import Container from '@/components/content/Container';
 import Link from 'next/link';
 
+import BlogPostClientParts from './BlogPostClientParts';
+
 import ClientLikeCount from '@/components/blog/ClientLikeCount';
 import ClientViewCount from '@/components/blog/ClientViewCount';
 import BlogSupport from '@/components/blog/BlogSupport';
@@ -139,14 +141,11 @@ export default async function BlogPost({
             </p>
           </span>
           <span className="mx-4 w-full border-t-[1px] border-zinc-300 dark:border-zinc-700"></span>
-          <span className="flex items-center whitespace-nowrap text-xxs uppercase">
-            <ClientViewCount
-              route={`/blog/${post.slug}`}
-              textColor="text-zinc-500 dark:text-zinc-400"
-            />
-            <span className="mx-2 text-zinc-500 dark:text-zinc-400">•</span>
-            <ClientLikeCount postId={post.id} />
-          </span>
+          <BlogPostClientParts
+            postId={String(post.id)}
+            postSlug={post.slug}
+            textColor="text-zinc-500 dark:text-zinc-400"
+          />
         </div>
         <h1 className="mt-8 text-3xl lg:text-4xl" id="post-title">
           {post.title}
@@ -172,9 +171,6 @@ export default async function BlogPost({
               {post.author_name || 'Anonymous'}
             </span>
           </div>
-          <span className="flex justify-end">
-            <SocialActions postId={post.id} />
-          </span>
         </div>
         <div className="mdx-content mt-10" aria-labelledby="post-title">
           {content}

@@ -211,7 +211,7 @@ export default function NewPostForm({
           setCategoryId={createFieldDispatcher('categoryId')}
           categoriesLoading={categoriesLoading}
         />
-        <div className="flex flex-row gap-2 items-center mt-4">
+        <div className="mt-4 flex flex-row items-center gap-2">
           <Button
             type="button"
             text="Preview"
@@ -267,14 +267,16 @@ export default function NewPostForm({
         className="!p-0"
       >
         <div
-          className="bg-white dark:bg-zinc-900 rounded-xl shadow-lg border border-zinc-200 dark:border-zinc-800 p-6 max-w-3xl mx-auto my-4 overflow-y-auto"
+          className="mx-auto my-4 max-w-3xl overflow-y-auto rounded-xl border border-zinc-200 bg-white p-6 shadow-lg dark:border-zinc-800 dark:bg-zinc-900"
           style={{ maxHeight: '80vh' }}
         >
-          <div className="mb-6 border-b border-zinc-200 dark:border-zinc-700 pb-4">
-            <h1 className="text-3xl font-bold mb-1 dark:text-light">{title}</h1>
-            <div className="text-zinc-500 text-xs dark:text-zinc-400">{slug}</div>
+          <div className="mb-6 border-b border-zinc-200 pb-4 dark:border-zinc-700">
+            <h1 className="mb-1 text-3xl font-bold dark:text-light">{title}</h1>
+            <div className="text-xs text-zinc-500 dark:text-zinc-400">
+              {slug}
+            </div>
           </div>
-          <div className="prose max-w-none dark:prose-invert dark:text-light">
+          <div className="prose dark:prose-invert max-w-none dark:text-light">
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeHighlight]}
