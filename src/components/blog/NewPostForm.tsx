@@ -8,9 +8,7 @@ import { useToast } from '@/components/ui/ToastContext';
 import { useImageInsertion } from '@/hooks/useImageInsertion';
 import { useUnsavedChanges } from '@/hooks/useUnsavedChanges';
 import { Category } from '@/types/blog';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import rehypeHighlight from 'rehype-highlight';
+import MDXPreview from '@/components/blog/MDXPreview';
 
 import PostFormFields from '@/components/blog/PostFormFields';
 import Button from '@/components/ui/Button';
@@ -277,12 +275,7 @@ export default function NewPostForm({
             </div>
           </div>
           <div className="prose dark:prose-invert max-w-none dark:text-light">
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeHighlight]}
-            >
-              {content}
-            </ReactMarkdown>
+            <MDXPreview source={content} />
           </div>
         </div>
       </Modal>
